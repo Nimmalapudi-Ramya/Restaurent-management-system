@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SSS RESTAURANT </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+        .bodypart {
+            flex-grow: 1;
+        }
+        .loginform, .success-message {
+            width: 16%;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .success-message {
+            display: none;
+            color: green;
+        }
+        .menu-button {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 2;
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+        }
+        .sidebar-open {
+            width: 250px;
+        }
+        .sidebar-closed {
+            width: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SSS RESTAURANT</h1>
+    </header>
+    <div class="container">
+        <div class="sidebar sidebar-closed">
+            <a href="#">Menu</a>
+            <a href="#">Books</a>
+            <a href="#">About</a>
+            <!-- Add more options as needed -->
+			<br><br>
+			<br><br>
+			<br><br>
+			<br><br>
+			<br><br>
+        </div>
+        <div class="bodypart">
+            <div class="menu-button" onclick="toggleSidebar()">&#8801;</div>
+            <form id="login-form" class="loginform"></br></br><br><br><br><br><br>
+            <label for="uname">Username:</label>
+            <input type="text" id="uname" name="uname" required><br><br>
+            <label for="pwd">Password:</label>
+            <input type="password" id="pwd" name="pwd" required>
+            <div id="err" style="color: red; text-align: center; margin-bottom: 40px;"></div>
+            <input type="submit" value="Login">
+        </form>
+            <div id="success" class="success-message">
+                <p>Login Successful!</p>
+            </div>
+        </div>
+    </div>
+
+    <section id="book-list">
+        <!-- Book Cards Go Here -->
+    </section>
+
+    <script>
+        // Your book data and card creation function...
+
+        // Function to toggle the sidebar
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            if (sidebar.classList.contains('sidebar-open')) {
+                sidebar.classList.remove('sidebar-open');
+                sidebar.classList.add('sidebar-closed');
+            } else {
+                sidebar.classList.remove('sidebar-closed');
+                sidebar.classList.add('sidebar-open');
+            }
+        }
+
+        // Add JavaScript for form validation and submission
+        const loginForm = document.getElementById('login-form');
+        const successMessage = document.getElementById('success');
+
+        loginForm.addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent the form from actually submitting
+
+            // Retrieve input values
+            const username = document.getElementById('uname').value;
+            const password = document.getElementById('pwd').value;
+
+            // Replace with your login credentials
+            if (username === 'user' && password === '000') {
+                // Redirect to the desired page ("restaurant.html") upon successful login
+                window.location.href = 'restaurant.html';
+            } else {
+                document.getElementById('err').textContent = 'Invalid username or password.';
+            }
+        });
+
+        // Your other JavaScript code...
+    </script>
+</body>
+</html>

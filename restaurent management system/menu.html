@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taste of India Restaurant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color:white;
+            color:black;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            font-size: 3em;
+        }
+
+        nav {
+            background-color:black;
+            color: #fff;
+            text-align: center;
+            height: 50px;
+            padding: 5px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .hero {
+            background-image: url('restaurant-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .button {
+            background-color: #e74c3c;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.5em;
+            padding: 15px 30px;
+            margin: 20px 10px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .button:hover {
+            background-color: #c0392b;
+        }
+
+        .button img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px;
+        }
+
+        .button-label {
+            font-size: 1.2em;
+        }
+
+        .menu {
+            background-color: #fff;
+            padding: 50px 0;
+        }
+
+        .menu-section {
+            margin: 20px;
+            text-align: center;
+        }
+
+        .menu-section h2 {
+            font-size: 2em;
+            color:black;
+            margin-bottom: 20px;
+        }
+
+        .menu-item {
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 20px;
+            text-align: left;
+            background-color: #f9f9f9;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-item img {
+            max-width: 100%;
+            height: auto;
+            width: 150px;
+            height: 150px;
+        }
+
+        .item-title {
+            font-size: 1.5em;
+            color:black;
+            margin-top: 10px;
+        }
+
+        .item-description {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .item-price {
+            font-size: 1.2em;
+            color:black;
+            margin: 10px 0;
+        }
+
+        .about {
+            background-color: #fff;
+            padding: 50px 0;
+        }
+
+        .about h2 {
+            font-size: 2em;
+        }
+
+        .contact {
+            background-color:black;
+            color: #fff;
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .contact h2 {
+            font-size: 2em;
+        }
+
+        .contact p {
+            font-size: 1.2em;
+        }
+
+        /* Updated button style */
+        .Ordernow {
+            background-color: red; /* New button color */
+            color: #fff; /* Text color */
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .Ordernow:hover {
+            background-color:black; /* Button color on hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Restaurant</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="restaurant.html">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="menu">
+
+       
+
+        <div class="menu-section">
+            <h2>Soups</h2>
+            <div class="menu-item">
+                <img src="tamotasoup.png" alt="Tomato Soup">
+                <div class="item-title">Tomato Soup</div>
+                <div class="item-description">Classic tomato soup with a hint of Indian spices.</div>
+                <div class="item-price">149 ₹ </div>
+				<a href="menu.html">
+                    <button class="Ordernow" onclick="OrderNow('Tamoto soup')">Order now</button>
+                </a>
+            </div>
+
+            <div class="menu-item">
+                <img src="bonesoup.png" alt="Bone Soup">
+                <div class="item-title">Bone Soup</div>
+                <div class="item-description">A bone soup with Chicken and aromatic spices.</div>
+                <div class="item-price">199 ₹</div>
+				<a href="menu.html">
+                <button class="Ordernow" onclick="OrderNow('Bone Soup')">Order now</button>
+                </a>
+            </div>
+			
+			 <div class="menu-section">
+            <h2>Starters</h2>
+			
+			<div class="menu-item">
+                <img src="lolipops.png" alt="lolipops">
+                <div class="item-title">Lolipops</div>
+                <div class="item-description">Marinated chicken cooked in a clay oven, served with mint chutney.</div>
+                <div class="item-price">249 ₹</div>
+				<a href="menu.html">
+                    <button class="Ordernow" onclick="OrderNow('Lolipops')">Order now</button>
+                </a>
+            </div>
+			
+            <div class="menu-item">
+                <img src="tandoorichicken.png" alt="Tandoori Chicken">
+                <div class="item-title">Tandoori Chicken</div>
+                <div class="item-description">Marinated chicken cooked in a clay oven .</div>
+                <div class="item-price">299 ₹</div>
+				<a href="menu.html">
+                    <button class="Ordernow" onclick="OrderNow('Tandoori Chicken')">Order now</button>
+                </a>
+            </div>
+
+            <div class="menu-item">
+                <img src="vsamosa.png" alt="Vegetable Samosa">
+                <div class="item-title">Vegetable Samosa</div>
+                <div class="item-description">Crispy pastries filled with spiced vegetables.</div>
+                <div class="item-price">99 ₹(2 pcs)</div>
+				<a href="menu.html">
+                    <button class="Ordernow" onclick="OrderNow('Vegetable Samosa')">Order now</button>
+                </a>
+            </div>
+
+        </div>
+
+           <div class="menu-section">
+            <h2>Biryanis</h2>
+            <div class="menu-item">
+                <img src="chickenbiriyani.png" alt="Chicken Biryani">
+                <div class="item-title">Chicken Biryani</div>
+                <div class="item-description">Fragrant basmati rice cooked with tender chicken and aromatic spices.</div>
+                <div class="item-price">299 ₹</div>
+                				<a href="menu.html">
+                    <button class="Ordernow" onclick="OrderNow('Chicken Biryani')">Order now</button>
+                </a>
+            </div>
+			<div class="menu-item">
+                <img src="muttonbiriyani.png" alt="muttonbiriyani">
+                <div class="item-title">Mutton Biryani</div>
+                <div class="item-description">Fragrant basmati rice cooked with mutton and aromatic spices.</div>
+                <div class="item-price">399 ₹</div>
+								<a href="menu.html">
+                    <button class="Ordernow" onclick="OrderNow('Mutton Biryani')">Order now</button>
+                </a>
+            </div>
+
+            <div class="menu-item">
+                <img src="vegetablebiriyani.png" alt="Vegetable Biryani">
+                <div class="item-title">Vegetable Biryani</div>
+                <div class="item-description">A flavorful rice dish with mixed vegetables and spices.</div>
+                <div class="item-price">199 ₹</div>
+								<a href="menu.html">
+                    <button class="Ordernow" onclick="OrderNow('Vegetable Biryani')">Order now</button>
+                </a>
+            </div>
+
+          
+
+		  
+        </div>
+    </div>
+         
+        </div>
+    </div>
+	    <script>
+        // JavaScript function to show the order success message and redirect to the menu page
+        function OrderNow(itemName) {
+            alert("Your order for " + itemName + " has been successfully delivered.");
+            // Redirect to the menu page
+            window.location.href = "menu.html";
+        }
+    </script>
+
+</body>
+</html>
